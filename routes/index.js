@@ -3,7 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'She-a-Bitch?' });
+  var jsonObject = {
+	'title':'She-a-Bitch?',
+	'version':'v1',
+	'description':'web app that allows people to bitch about anybody, anonymously'
+	};
+  res.json(jsonObject);
 });
 
 
